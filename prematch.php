@@ -78,3 +78,12 @@ else
     echo "nie znaleziono daty";
  
  ?>
+
+<?php
+$wzorzec = '/[-\w.]+@([-A-z0-9]+\.)+[A-z]/';
+$tekst = "email: john@poczta.eu";
+if(preg_match($wzorzec, $wzorzec))
+echo "znaleziono email".$tekst[1];
+else
+echo "nie znaleziono email";
+?>
