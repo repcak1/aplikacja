@@ -87,3 +87,11 @@ echo "znaleziono email".$tekst[1];
 else
 echo "nie znaleziono email";
 ?>
+<?php
+ $wzorzec = '/((\bhttps?:\/\/)|(\bwww\.))\S*/';
+ $tekst = 'adres www: www.wp.pl';
+ if(preg_match($wzorzec, $tekst,$matches))
+echo "znaleziono adres www".$matches[0];
+else
+echo "nie znaleziono adresu www";
+?>
